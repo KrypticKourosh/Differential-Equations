@@ -1,0 +1,21 @@
+basics:
+import sympy as sp
+
+x = sp.Symbol('x') or x, y = sp.symbols('x, y') -> turns string 'x' into an object x used in math
+y = sp.Function('y')(x) -> y is a function for x
+y = 2 * x ** 3 ---> y = 2x^3
+
+expression = 2 * x - y
+
+methods:
+
+expand():  y * (x + 1) -> y * x + y
+pretty_print(): prints the expression in a better way, with no *, ...
+subs({x: 2}): subs x : 2 and gives the answer
+factor(): x ** 2 - 1 -> (x - 1)(x + 1)
+simplify(): makes the expression more readable, like: x * y + x * 2 -> x * (y + 2)
+solve(): solves expression = 1 and returns the list of answers
+diff(): finds differential -> diff(expression, x, 3)
+        means: find the diff of expression, with respect to x, and find the third diff
+integrate(): finds integrate -> integrate(expression, x, x, x) -> three times
+             with limits: integrate(expression, (x, 0, sp.oo)) -> low bound = 0, upper bound = oo (infinity) 
